@@ -1,0 +1,28 @@
+import os
+import fabengine
+from fabric.api import task, local, lcd
+
+ROOT = os.path.dirname(__file__)
+
+fabengine.config(ROOT, [
+        'app.yaml',
+])
+
+fabengine.dev_appserver.default_arguments = (
+    'allow_skipped_files',),{
+        'blobstore_path': '/tmp/${project}.blobstore',
+        'datastore_path': '/tmp/${project}.datastore',
+        'logs_path': '/tmp/${project}.logs',
+        'host': '0.0.0.0',
+    }
+
+@task
+def update_mapreduce():
+    import shutil
+    with lcd(ROOT):
+        try:
+            shutil.rmtree('mapreduce')
+        except OSError:
+            pass
+        local(
+            'svn export http://appengine-mapreduce.googlecode.com/svn/trunk/python/src/mapreduce')

@@ -1,0 +1,4 @@
+# Fabengine - needed to pack requirements for deployment
+git+https://github.com/xlevus/fabengine.git
+
+-r requirements.txt
