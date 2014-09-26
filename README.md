@@ -11,6 +11,12 @@ In order to install the template, you can install it from Pypi::
 
 
     pip install gae.template.app
+    
+PLease note that currently the template is not yet published on Pypi. Just download the source and run::
+
+    python setup.py install
+    
+in order to install it.
 
 
 Creating an application
