@@ -23,6 +23,6 @@ q = [
 
 
 class GaeProjectTemplate(Template):
-    _template_dir = 'template/'
+    _template_dir = 'templates/'
     summary = 'Google Appengine Project template'
     vars = q
