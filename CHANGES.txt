@@ -1,0 +1,3 @@
+0.1.1
+
+* Added py_modules directive to setup.py in order to make template.py visible.
