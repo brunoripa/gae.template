@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.1.1"
+version = "0.1.3"
 
 setup(name="gae.template",
       version=version,
@@ -13,7 +13,7 @@ setup(name="gae.template",
       url="",
       license="BSD",
       packages=find_packages(),
-      py_modules=["template",],
+      py_modules=["templates",],
       include_package_data=True,
       zip_safe=True,
       install_requires=["PasteScript>=1.3"],
